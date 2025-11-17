@@ -1,0 +1,32 @@
+🎵 Responsive Spotify-Style Webpage
+
+A fully responsive single-file webpage built using HTML, CSS, and JavaScript, designed to adapt seamlessly across all device sizes — mobile, tablet, and desktop.
+
+This project is a mini-clone inspired by Spotify’s layout, demonstrating navigation bar, hero section, album grid, and responsive functionality — all inside one HTML file.
+
+📱 Features
+✔️ Fully Responsive Design
+
+Works on mobile, tablet, laptop & large screens
+
+Uses Flexbox + responsive media queries
+
+✔️ Spotify-Inspired UI
+
+Home / Browse / Library navigation
+
+Banner-style hero section
+
+Music album grid cards
+
+✔️ Single-File Project
+
+All code is inside one HTML file:
+
+HTML
+
+Internal CSS
+
+Internal JS
+
+Easy to run anywhere.
