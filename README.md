@@ -36,3 +36,6 @@ Easy-to-use input fields and better arrangement of travel categories.
 
 HERE IS THE JPG COPY OF THE REDESIGN
 
+
+here is the pdf -------
+[task 1 landing page.pdf](https://github.com/user-attachments/files/23583795/task.1.landing.page.pdf)
