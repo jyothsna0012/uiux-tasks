@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MusicFlow - Responsive Spotify Style</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+
+      header {
+        width: 100%;
+        padding: 20px 5%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #000;
+        color: #fff;
+        position: relative;
+      }
+
+      .logo {
+        font-size: 28px;
+        font-weight: bold;
+      }
+
+      nav {
+        display: flex;
+        gap: 30px;
+      }
+
+      nav a,
+      .mobile-nav a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 18px;
+      }
+
+      .hamburger {
+        display: none;
+        font-size: 30px;
+        cursor: pointer;
+      }
+
+      .mobile-nav {
+        display: none;
+        flex-direction: column;
+        background: #111;
+        padding: 20px;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        width: 160px;
+        border-radius: 10px;
+        gap: 15px;
+      }
+
+      .hero {
+        height: 70vh;
+        padding-left: 5%;
+        display: flex;
+        align-items: center;
+        color: white;
+        background: url("https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&q=80&w=1200")
+          center/cover no-repeat;
+      }
+
+      .hero h1 {
+        font-size: 50px;
+      }
+      .hero p {
+        font-size: 20px;
+        margin: 10px 0;
+      }
+
+      .hero button {
+        padding: 12px 28px;
+        background: #1db954;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 18px;
+      }
+
+      .cards {
+        padding: 50px 5%;
+      }
+
+      .cards h2 {
+        font-size: 28px;
+        margin-bottom: 20px;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+      }
+
+      .card {
+        background: #121212;
+        padding: 15px;
+        border-radius: 10px;
+        text-align: center;
+        color: white;
+        transition: 0.3s;
+      }
+
+      .card:hover {
+        transform: scale(1.05);
+      }
+
+      .card img {
+        width: 100%;
+        border-radius: 10px;
+      }
+
+      @media (max-width: 900px) {
+        .grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .hero h1 {
+          font-size: 40px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        nav {
+          display: none;
+        }
+        .hamburger {
+          display: block;
+        }
+        .grid {
+          grid-template-columns: 1fr;
+        }
+        .hero {
+          height: 60vh;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">MusicFlow</div>
+
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#browse">Browse</a>
+        <a href="#artists">Artists</a>
+        <a href="#premium">Premium</a>
+      </nav>
+
+      <div class="hamburger" id="hamburger">☰</div>
+
+      <div class="mobile-nav" id="mobileNav">
+        <a href="#home">Home</a>
+        <a href="#browse">Browse</a>
+        <a href="#artists">Artists</a>
+        <a href="#premium">Premium</a>
+      </div>
+    </header>
+
+    <!-- HOME -->
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <h1>Feel the Music</h1>
+        <p>Your vibe. Your playlist. Your mood.</p>
+        <button>Explore Now</button>
+      </div>
+    </section>
+
+    <!-- BROWSE -->
+    <section class="cards" id="browse">
+      <h2>Browse Playlists</h2>
+      <div class="grid">
+        <div class="card">
+          <img src="https://picsum.photos/300?1" />
+          <h3>Chill Beats</h3>
+        </div>
+
+        <div class="card">
+          <img src="https://picsum.photos/300?2" />
+          <h3>Morning Vibes</h3>
+        </div>
+
+        <div class="card">
+          <img src="https://picsum.photos/300?3" />
+          <h3>Workout Mix</h3>
+        </div>
+
+        <div class="card">
+          <img src="https://picsum.photos/300?4" />
+          <h3>Top 50 Global</h3>
+        </div>
+      </div>
+    </section>
+
+    <!-- ARTISTS -->
+    <section class="cards" id="artists">
+      <h2>Top Artists</h2>
+      <div class="grid">
+        <div class="card">
+          <img src="https://picsum.photos/300?5" />
+          <h3>Artist A</h3>
+        </div>
+        <div class="card">
+          <img src="https://picsum.photos/300?6" />
+          <h3>Artist B</h3>
+        </div>
+        <div class="card">
+          <img src="https://picsum.photos/300?7" />
+          <h3>Artist C</h3>
+        </div>
+        <div class="card">
+          <img src="https://picsum.photos/300?8" />
+          <h3>Artist D</h3>
+        </div>
+      </div>
+    </section>
+
+    <!-- PREMIUM -->
+    <section class="cards" id="premium">
+      <h2>Go Premium</h2>
+      <p style="font-size: 20px; margin-top: 10px">
+        Ad-free music • Offline mode • Better quality
+      </p>
+    </section>
+
+    <script>
+      const ham = document.getElementById("hamburger");
+      const nav = document.getElementById("mobileNav");
+
+      ham.onclick = () => {
+        nav.style.display = nav.style.display === "flex" ? "none" : "flex";
+      };
+
+      // Auto-close on link click (mobile)
+      document.querySelectorAll(".mobile-nav a").forEach((link) => {
+        link.onclick = () => (nav.style.display = "none");
+      });
+    </script>
+  </body>
+</html>
